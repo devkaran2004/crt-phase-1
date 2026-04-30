@@ -25,6 +25,113 @@ int main() {
  
  result=(double)global/local;
  cout<<result;
+    return 0;
+}
+
+
+
+
+// local and global variable
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+int s1,s2,s3;
+cin>>s1>>s2>>s3;
+
+bool isEqual = (s1>0)&&(s1=s2)&&(s2=s3);
+cout<< isEqual;
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a,b, temp;
+    cin>>a>>b;
+
+    temp=a;
+    a=b;
+    b=temp;
+    
+    cout<<a<<"\n"<<b;
 
     return 0;
 }
+
+// local and global variable
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int choice;
+    cin>>choice;
+
+    if(choice==1){
+        double radius;
+        cin>>radius;
+        cout<< 3.14*radius*radius;    }
+        else if(choice==2){
+            double l,b;
+            cin>>l>>b;
+            cout<<l*b;
+        } else if(choice==3){
+            double b,h;
+            cin>>b>>h;
+            cout<<0.5*b*h;
+        } else {
+            cout<<"invalid choice"
+        }
+
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+
+  int a,b,c;
+  cin>>a>>b>>c;
+int sum = a+b+c;
+  float avg = sum/3;
+  cout<<avg;
+
+    return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    const int userId=1234;
+    const int pass=0000;
+
+  int username,password;
+  cout<<"enter username :";
+  cin>>username;
+  cout<<"enter password :";
+  cin>>password;
+
+  bool isGranted = (userId==username) && (pass==password);
+
+  cout<< "granted" << isGranted <<endl;
+  cout<< "denied" << !
+  isGranted <<endl;
+    return 0;
+}
+
+
+
+
+
+
+
