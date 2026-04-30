@@ -1,4 +1,4 @@
-// Online C++ compiler to run C++ program online
+//celcius to farhneit
 #include <iostream>
 using namespace std;
 int main() {
@@ -9,6 +9,22 @@ double c,f;
      f=(c*9/5)+32.0;
      
      cout<<f;
+
+    return 0;
+}
+
+// local and global variable
+#include <iostream>
+using namespace std;
+
+int global=100;
+int main() {
+ int local;
+ float result;
+ cin>>local;
+ 
+ result=(double)global/local;
+ cout<<result;
 
     return 0;
 }
