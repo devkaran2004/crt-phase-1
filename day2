@@ -114,5 +114,85 @@ return 0;
 }
 
 
+#include <iostream>
+using namespace std;
+
+int main(){
+int n;
+int sum=0;
+while(true){
+  cin>>n;
+  if(n<0){
+    break;
+  }
+  sum=sum+n;
+}
+cout<<sum;
+return 0;
+}
+
+
+// day night motion detected //
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+string dayorNight;
+bool motiondetected;
+
+cout<<"is it day or night?";
+cin>>dayorNight;
+cout<<"is motion detected?(1 for yes and 0 for no)";
+cin>>motiondetected;
+  if (dayorNight=="NIGHT"||dayorNight=="night"){
+    if(motiondetected){
+      cout<<"100% brightness";
+    }else{
+      cout<<"10% brightness";
+    }
+
+  }
+else{
+  cout<<"no lights";
+}
+
+return 0;
+}
+
+
+
+///call center 
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+int n;
+cin>>n;
+
+switch(n)
+{
+  case 1:
+  cout<<"for support";
+  break;
+
+  case 2:
+  cout<<"for billing";
+  break;
+  case 3:
+  cout<<"for some techincal issue";
+  break;
+  case 4:
+  cout<<"to talk with agent ";
+  break;
+  default:
+  cout<<"invalid request";
+  break;
+}
+return 0;
+}
 
 
