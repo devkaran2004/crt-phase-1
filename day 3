@@ -127,6 +127,70 @@ b=c;
 return 0;
 }
 
+#Prime number 
+
+#include <iostream>
+using namespace std;
+
+int main(){
+int n;
+cin>>n;
+bool isPrime=true;
+if(n<2){
+  isPrime=false;
+}else{
+ for (int i=2;i<n;i++){
+  if(n%i==0){
+     isPrime=false;
+     break;
+  }
+ }
+}
+if(isPrime){
+  cout<<"prime";
+}else{
+  cout<<"non prime";
+}
+return 0;
+}
+
+#phone unlock
+
+#include <iostream>
+using namespace std;
+
+int main(){
+int pass;
+
+do{
+  cout<<"Enter Pass :";
+  cin>>pass;
+}while(pass!=1234);
+cout<<" phone unlocked...";
+
+ return 0;
+}
+
+#water jar filler
+
+#include <iostream>
+using namespace std;
+
+int main(){
+int cw=0;
+int add;
+
+
+while(cw<500){
+  cout<<"jar ha "<<cw<<" ml and how much?";
+  cin>>add;
+  cw=cw+add;
+} cout<< "jar is fully filled with water"<<cw<<"ml";
+ return 0;
+}
+
+
 #
+
 
 
