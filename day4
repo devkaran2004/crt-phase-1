@@ -1,1 +1,111 @@
+#nested loops#
+
+#basic pattern
+
+#include <iostream>
+using namespace std;
+
+int main(){
+int n;
+cin>>n;
+
+for(int i=1;i<=n;i++){
+   for(int j=1;j<=n;j++){
+    cout<<"*";
+}
+cout<<"\n";
+}
+
+ return 0;
+}
+
+
+#rectangle
+
+#include <iostream>
+using namespace std;
+
+int main(){
+int n;
+cin>>n;
+
+for(int i=1;i<=n+1;i++){
+   for(int j=1;j<=n;j++){
+    cout<<" * ";
+}
+cout<<"\n";
+}
+
+ return 0;
+}
+
+
+#right angle triangle
+
+#include <iostream>
+using namespace std;
+
+int main(){
+int n;
+cin>>n;
+
+for(int i=1;i<=n;i++){
+   for(int j=1;j<=i;j++){
+    cout<<" * ";
+}
+cout<<"\n";
+}
+
+ return 0;
+}
+
+#upside down
+
+#include <iostream>
+using namespace std;
+
+int main(){
+int n;
+cin>>n;
+
+for(int i=1;i<=n;i++){
+   for(int j=i;j<=n;j++){
+    cout<<" * ";
+}
+cout<<"\n";
+}
+
+ return 0;
+}
+
+#mirrored right angle triangle 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        // Step 1: Print spaces (n - i)
+        for (int j = n-i; j >= 1; j--) {
+            cout << " ";
+        }
+        
+        
+        for (int k = 1; k <= i; k++) {
+            cout << "*";
+        }
+        
+        
+        cout << "\n";
+    }
+
+    return 0;
+}
+
+
+
+
 
