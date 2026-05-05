@@ -1,1 +1,101 @@
+#funtionss
+#area of rectangle
+
+#include <iostream>
+using namespace std;
+void msg(int l,int b){
+ cout<<l*b;
+}
+int main(){
+    msg(5,6);
+ return 0;
+
+}
+
+#include <iostream>
+using namespace std;
+int area(int a,int b){
+  return a*b;
+}
+int main(){
+
+   int ar = area(5,6);
+   cout<<ar;
+ return 0;
+
+}
+
+#include <iostream>
+using namespace std;
+int area(int a,int b){
+  return a*b;
+}
+int main(){
+   int l=10;
+   int w=5;
+   int ar = area(l,w);
+   cout<<ar;
+ return 0;
+
+}
+
+
+#types of function
+4.1 no arguments no return type
+#include <iostream>
+using namespace std;
+void doorbell(){
+  cout<<"ting ting";
+}
+int main(){
+   doorbell();
+ return 0;
+
+}
+
+#4.2 a but no r
+#include <iostream>
+using namespace std;
+void sendText( string msg){
+  cout<<msg;
+}
+int main(){
+   sendText("hatt");
+ return 0;
+
+}
+
+#4.3
+no a but return
+
+#include <iostream>
+using namespace std;
+int ticket(){
+    return 101;
+}
+int main(){
+   cout<<ticket();
+ return 0;
+
+}
+# 4.4
+argument and return
+#include <iostream>
+using namespace std;
+int currency(int a){
+    return a/100;
+}
+int main(){
+  cout<<currency(100);
+ return 0;
+}
+
+
+
+
+
+
+
+
+
 
