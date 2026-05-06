@@ -97,11 +97,78 @@ int main(){
  return 0;
 }
 
+#class and objects#
 
+#include <iostream>
+using namespace std;
+ class student {
+    public:
+      string name;
+      int age;
 
+      void intro(){
+        cout<<name<<"  and  "<<age<<endl;
+      }
 
+      void thc(){
+        cout<<"hello...";
+      }
+};
+int main(){
+    student obj;
+    obj.name="abhishek";
+    obj.age=24;
+    obj.intro();
+    obj.thc();
+ return 0;
+}
 
+#include <iostream>
+using namespace std;
+ class student {
+    public:
+      string name;
+      int age;
 
+      void intro(){
+        cout<<name<<"  and  "<<age<<endl;
+      }
+
+      void thc(){
+        cout<<"hello...";
+      }
+};
+int main(){
+    student obj,s1;
+    obj.name="abhishek";
+    obj.age=24;
+    obj.intro();
+    s1.name="Dev";
+    s1.age=22;
+    s1.intro();
+    obj.thc();
+ return 0;
+}
+
+# acess modifier 
+1)public.....
+
+#include <iostream>
+using namespace std;
+ class park {
+    public:
+     void enter(){
+        cout<<"anyone can enter";
+
+     }
+};
+int main(){
+   park p;
+   p.enter();
+ return 0;
+}
+
+2)private...
 
 
 
