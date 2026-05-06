@@ -1,1 +1,114 @@
+#pointers
+
+#include <iostream>
+using namespace std;
+
+void swap(int *x,int *y){
+int temp= *x;
+*x= *y;
+*y=temp;
+
+}
+
+int main(){
+ int a,b;
+ cin>>a>>b;
+ swap(&a,&b);
+
+ cout << a << " " << b;
+  return 0;
+
+}
+
+#default arguments
+#include <iostream>
+using namespace std;
+int area(int a, int b=5){
+    return a*b;
+}
+int main(){
+
+ cout<<area(10)<<endl;
+ cout<<area(10,3);
+}
+
+#call by avlue and refrence
+
+//value is a photocopy
+//refernce is original copy adddress
+
+#include <iostream>
+using namespace std;
+
+void value(int x){
+    x=500;
+}
+void ref(int &x){
+    x=500;
+}
+
+int main(){
+int a=100;
+
+value(a);
+cout<<a<<endl;
+
+ref(a);
+cout<<a;
+}
+
+//problem is calculate price of number of coffees 
+
+#include <iostream>
+using namespace std;
+int income(int n, int price=100){
+    return n*price;
+}
+int main(){
+    int n;
+ cin>>n;
+ cout<<income(n)<<endl;
+
+}
+
+//smart ac remote
+
+#include <iostream>
+using namespace std;
+void setTemp(int temp=22){
+cout<<temp<<endl;
+}
+void setTemp(double temp){
+ cout<<temp<<endl;
+}
+void setTemp(string mode){
+ if (mode=="Eco"){
+    cout<<"temp is 24"<<endl;
+ } else if(mode=="Turbo"){
+    cout<<"temp is 18"<<endl;
+ }
+}
+int main(){
+    setTemp();
+    setTemp(20.5);
+    setTemp("Eco");
+    setTemp("Turbo");
+
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
