@@ -169,8 +169,43 @@ int main(){
 }
 
 2)private...
+#include <iostream>
+using namespace std;
+ class bankAccount {
+   private :
+   int bal=5000;
 
+   public :
+   void show(){
+cout<< bal;
+   }
+};
+int main(){
+bankAccount obj;
+obj.show();
+ return 0;
+}
 
+3) protected...
+
+#include <iostream>
+using namespace std;
+ class Parent{
+   protected :
+   int code = 1234;
+
+};
+class child :public Parent{
+   public:
+void acess(){
+   cout<<code;
+}
+};
+int main(){
+child obj ;
+obj.acess();
+ return 0;
+}
 
 
 
