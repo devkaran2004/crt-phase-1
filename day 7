@@ -1,1 +1,90 @@
+#public private protected#
+
+#include <iostream>
+using namespace std;
+ class Parent{
+   protected :
+   int code = 1234;
+
+};
+class child :public Parent{
+   public:
+void acess(){
+   cout<<code<<endl;
+}
+};
+class pvt{
+private :
+int pass= 5555;
+
+public :
+void show(){
+   cout<<pass<<endl;
+}
+};
+class pblic{
+public : void hello(){
+   cout<<"hello";
+}
+};
+int main(){
+child obj ;
+obj.acess();
+pvt h1;
+h1.show();
+pblic p;
+p.hello();
+ return 0;
+}
+
+//Constructor and its types//
+// default parameterized and copy//
+
+#include <iostream>
+using namespace std;
+ class wifi{
+   public :
+   string name;
+   string pass;
+     //defaullt contructor
+   wifi(){
+      name="ACT";
+      pass="acttt";
+   }
+   public:
+   void show(){
+      cout<<name <<" " << pass;   }
+ 
+};
+int main(){
+wifi obj;
+obj.show();
+}
+
+#include <iostream>
+using namespace std;
+ class student{
+   public :
+   string name;
+   int id;
+     //parameterized contructor
+   student(string stuname,int stuId){
+      name=stuname;
+      id=stuId;
+   }
+   public:
+   void show(){
+      cout<<name<<" " << id;   }
+ 
+};
+int main(){
+student obj("dev",101);
+obj.show();
+}
+
+
+
+
+
+
 
