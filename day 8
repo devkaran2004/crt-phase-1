@@ -1,1 +1,146 @@
+//OOPS
+//INHERITANCE-1)SINGLE
+
+#include <iostream>
+using namespace std;
+ class Vehicle {
+public :
+void start(){
+    cout<<"vehicle start"<<endl;
+}
+
+};
+class Car : public Vehicle{
+    public :
+ void drive(){
+    cout<<"car running...";
+ }
+};
+int main(){
+Car c;
+c.start();
+c.drive();
+}
+
+
+//OOPS
+//INHERITANCE-2)MULTILEVEL
+
+#include <iostream>
+using namespace std;
+ class Vehicle {
+public :
+void start(){
+    cout<<"vehicle start"<<endl;
+}
+
+};
+class Car : public Vehicle{
+    public :
+ void drive(){
+    cout<<"car running..."<<endl;
+ }
+};
+class bike : public Car{
+    public :
+   void run(){
+    cout<<"bike running";
+   }
+};
+int main(){
+    bike b;
+b.start();
+b.drive();
+b.run();
+}
+
+
+//OOPS
+//INHERITANCE-3)HIERARCHIAL
+
+#include <iostream>
+using namespace std;
+ class Vehicle {
+public :
+void start(){
+    cout<<"vehicle start"<<endl;
+}
+
+};
+class Car : public Vehicle{
+    public :
+ void drive(){
+    cout<<"car driving..."<<endl;
+ }
+};
+class bike : public Vehicle{
+    public :
+   void run(){
+    cout<<"bike running";
+   }
+};
+int main(){
+    Car c;
+    c.start();
+    c.drive();
+
+    bike b;
+    b.start();
+    b.run();
+    return 0;
+}
+
+//OOPS
+//INHERITANCE-4)MULTIPLE
+
+#include <iostream>
+using namespace std;
+ class Parent1 {
+public :
+void money(){
+    cout<<"mummy paise do"<<endl;
+}
+};
+class Parent2{
+    public :
+ void money(){
+    cout<<"papa paise do"<<endl;
+ }
+};
+class Child : public Parent1, public Parent2{
+};
+int main(){
+Child c;
+c.Parent1::money();
+c.Parent2::money();
+    return 0;
+}
+
+//OOPS
+//INHERITANCE-5)HYBRID(DIAMOND PROBLEM)
+#include <iostream>
+using namespace std;
+class A{
+public:
+void msg(){
+    cout<<"BJP Won";
+}
+};
+class B : virtual public A{
+
+};
+class C : virtual public A{
+
+};
+class D : public B, public C{
+
+};
+int main(){
+D d;
+d.msg();
+}
+
+
+
+
 
