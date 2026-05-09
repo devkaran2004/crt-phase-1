@@ -140,7 +140,97 @@ D d;
 d.msg();
 }
 
+#include <iostream>
+using namespace std;
 
+class Appliance {
+public:
+    // Added 'virtual' here so derived classes can actually override it
+    virtual void turnOn() {
+        cout << "Appliance starting..." << endl;
+    }
+
+    // Pure virtual function makes this an Abstract Base Class
+    virtual void work() = 0;
+
+    // Best practice: virtual destructor for polymorphism
+    virtual ~Appliance() {} 
+};
+
+class Fan : public Appliance {
+public:
+    void turnOn() override {
+        cout << "Fan starting..." << endl;
+    }
+    void work() override {
+        cout << "Fan giving cool air." << endl;
+    }
+};
+
+class Toaster : public Appliance {
+public:
+    void turnOn() override {
+        cout << "Toaster clicking on..." << endl;
+    }
+    void work() override {
+        cout << "Toaster heating bread." << endl;
+    }
+};
+
+int main() {
+    Appliance* ka; // Base class pointer
+    
+    Fan f;
+    Toaster t;
+
+    // Point to Fan
+    ka = &f;
+    ka->turnOn(); // Calls Fan's version
+    ka->work();
+
+    cout << "---" << endl;
+
+    // Point to Toaster
+    ka = &t;
+    ka->turnOn(); // Calls Toaster's version
+    ka->work();
+
+    return 0;
+}
+
+//CONSTRUCTOR OVERLOADING
+#include <iostream>
+using namespace std;
+class rectangle{
+    public :
+    int length;
+    int width;
+     rectangle(){
+        length=1;
+        width=1;
+     }
+     rectangle(int s){
+        length=s;
+        width=s;
+     }
+     rectangle(int s1,int s2){
+        length=s1;
+        width=s2;
+     }
+     void Area(){
+        cout<<length*width;
+     }
+};
+int main() {
+ rectangle r1;
+ rectangle r2(5);
+ rectangle r3(6,7);
+
+ r1.Area();
+ r2.Area();
+ r3.Area();
+    return 0;
+}
 
 
 
